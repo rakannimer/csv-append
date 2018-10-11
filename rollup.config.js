@@ -17,6 +17,7 @@ export default {
       format: "esm"
     }
   ],
+  external: ["csv-write-stream"],
   plugins: [
     typescript({
       typescript: require("typescript"),
