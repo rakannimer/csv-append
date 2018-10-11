@@ -1,6 +1,6 @@
 {
   "name": "csv-append",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -10,8 +10,9 @@
     "test:i": "jest --watch --coverage",
     "test": "jest --coverage",
     "prepublish": "npm run test && npm run build",
-    "commit": "git-cz",
-    "setup:semantic-release": "npx semantic-release-cli setup"
+    "c": "git-cz",
+    "setup:semantic-release": "npx semantic-release-cli setup",
+    "semantic-release": "semantic-release"
   },
   "husky": {
     "pre-commit": "prettier src/* --write",
