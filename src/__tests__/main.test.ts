@@ -11,12 +11,14 @@ describe("csvAppend", () => {
   });
   test("works with object input", async () => {
     const { append, end } = csvAppend(PATH);
-    const writer = append({ a: "1", b: "2" });
+    append({ a: "1", b: "2" });
+    append({ a: "2", b: "3" });
     await end();
     const csv = readFileSync(PATH, { encoding: "utf8" });
     expect(csv).toMatchInlineSnapshot(`
 "a,b
 1,2
+2,3
 "
 `);
   });
